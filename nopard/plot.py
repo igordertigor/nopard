@@ -9,7 +9,7 @@ def density_plot ( x, D ):
     # TODO: pass parameters through (e.g. color, axes, ...)
     fx = D(x)
     x_ = pl.concatenate ( (x, x[::-1]) )
-    fx_ = pl.clip(pl.concatenate ( (fx+D.c,fx-D.c) ), 0, pl.inf )
+    fx_ = pl.clip(pl.concatenate ( (fx+D.c,fx[::-1]-D.c) ), 0, pl.inf )
     pl.fill ( x_, fx_, edgecolor=[.5]*3, facecolor=[.8]*3 )
     pl.plot ( x, fx, color=[0]*3 )
 
