@@ -138,6 +138,7 @@ class orthogonalDensity ( object ):
 
 class orthogonal2d ( orthogonalBasis ):
     def __init__ ( self, Basis1d ):
+        """Takes a 1d Basis and gives the 2d Tensor basis"""
         self.basis1d = Basis1d
         self.K = self.basis1d.K
     def __call__ ( self, j, x ):
